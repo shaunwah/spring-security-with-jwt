@@ -14,7 +14,7 @@ Before we begin, please install the required Spring Security dependency by pasti
 <!-- ... -->
 ```
 
-## Step 2: The User model and repository
+## Step 2: The User Model and Repository
 Before we can start, we will first need to create a `User` model and repository.
 
 *User.java*
