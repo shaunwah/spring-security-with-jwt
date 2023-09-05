@@ -138,7 +138,7 @@ After you have generated your keys, move them into your `/resources` folder and 
 *application.properties*
 ```yml
 rsa.public.key=classpath:certs/public.pem
-rsa.private.keyclasspath:certs/private.pem
+rsa.private.key=classpath:certs/private.pem
 ```
 
 This will let Spring Boot know where your keys are for the next step.
