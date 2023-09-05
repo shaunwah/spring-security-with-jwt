@@ -2,7 +2,7 @@
 Hello everyone! This guide will walk you through setting up Spring Security with JWT support for your RESTful Spring Boot application.
 
 ## Step 1: Installing Dependencies
-Before we begin, please install the required Spring Security dependency by pasting this code snippet into your `pom.xml` file.
+Before we start, please install the required Spring Security and OAuth2 Resource Server dependencies by pasting this code snippet into your `pom.xml` file.
 
 *pom.xml*
 ```xml
@@ -11,11 +11,15 @@ Before we begin, please install the required Spring Security dependency by pasti
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+</dependency>
 <!-- ... -->
 ```
 
 ## Step 2: The User Model and Repository
-Before we can start, we will first need to create a `User` model and repository.
+We will first need to create a `User` model and repository.
 
 *User.java*
 ```java
