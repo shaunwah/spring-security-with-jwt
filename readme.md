@@ -124,7 +124,7 @@ public class AuthService implements UserDetailsService {
 
 The `loadUserByUsername` method is essentially attempting to retrieve a record from your MySQL database based on the username that was fed in as an argument. We will dive deeper into implementing the controller to handle this in the subsequent steps.
 
-## Step 4: Generating Public and Private Keys
+## Step 5: Generating Public and Private Keys
 In order to use JWT, we will need to generate public and private keys as the tokens generated will be signed by them. Enter these commands in your terminal to generate them.
 
 *Terminal*
@@ -144,7 +144,7 @@ rsa.private.key=classpath:certs/private.pem
 This will let Spring Boot know where your keys are for the next step.
 
 
-## Step 5: Overriding the Default Configuration
+## Step 6: Overriding the Default Configuration
 With `AuthService` created, we can start creating a custom configuration file to set up Spring Security to authenticate users with stored credentials from your MySQL database.
 
 Create a new configuration file named `SecurityConfig.java`, preferably in your `configs` folder.
@@ -202,7 +202,7 @@ public class SecurityConfig {
 
 ### An explanation for each method will be provided in the near future.
 
-## Step 6: Creating a Token Service
+## Step 7: Creating a Token Service
 Next, we will need to create a token service to handle our JWTs. These tokens will be generated through this service.
 
 *TokenService.java*
@@ -233,7 +233,7 @@ public class SecurityTokenService {
 
 ### An explanation for each method will be provided in the near future.
 
-## Step 7: Exposing Endpoints with a Controller
+## Step 8: Exposing Endpoints with a Controller
 Finally, you will need to create a new controller or modify an existing one to handle your authentication endpoints. In this case, we will be creating a new controller.
 
 *AuthController.java*
